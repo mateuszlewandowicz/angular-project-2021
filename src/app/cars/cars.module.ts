@@ -3,13 +3,16 @@ import { CommonModule } from '@angular/common';
 import { CarsListComponent } from './cars-list/cars-list.component';
 import { TotalCostComponent } from './total-cost/total-cost.component';
 import { SharedModule } from '../shared-module/shared.module';
+import { CarsDetailsComponent } from './cars-details/cars-details.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
-  declarations: [CarsListComponent, TotalCostComponent],
+  declarations: [CarsListComponent, TotalCostComponent, CarsDetailsComponent],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   exports: [CarsListComponent]
 })

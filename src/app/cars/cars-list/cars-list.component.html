@@ -1,7 +1,7 @@
 <cs-header>
-  <p levels>cars</p>
+  <p levels>Lista samochodów w serwisie:</p>
   <div content>
-    <p>Some text</p>
+    <p>Poniżej statusy pojazdów wraz z informacjami</p>
   </div>
 </cs-header>
 
@@ -22,7 +22,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let car of cars; let i = index">
+          <tr *ngFor="let car of cars; let i = index" class="row-car" [routerLink]="['/cars', car.id]">
             <td [ngClass]="{'row-error': car.isFullyDamaged}">
               {{ car?.model }}
             </td>
