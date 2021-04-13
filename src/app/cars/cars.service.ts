@@ -13,17 +13,16 @@ import "rxjs";
 export class CarsService {
   private apiUrl = 'http://localhost:3000/api/cars';
 
-  constructor(private http: HttpClient ) { }
+  constructor(private http: HttpClient) { }
 
   getCars(): Observable<Car[]> {
-    return this.http.get<Car[]>('http://localhost:3000/api/cars');
+    return this.http.get<Car[]>(this.apiUrl);
     // return this.http.get(this.apiUrl)
     //   .pipe(
     //     map((res) => <Car[]>res.json())
     //   );
-
   }
-  getCar(id : number): Observable<Car> {
+  getCar(id: number): Observable<Car> {
     return this.http.get<Car>(this.apiUrl + `/${id}`);
   }
 }

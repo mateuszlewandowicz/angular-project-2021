@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CarsService } from '../cars.service';
 import { Car } from '../models/car';
 
@@ -9,6 +9,7 @@ import { Car } from '../models/car';
   templateUrl: './cars-details.component.html',
   styleUrls: ['./cars-details.component.less']
 })
+
 export class CarsDetailsComponent implements OnInit {
   car! : Car;
 

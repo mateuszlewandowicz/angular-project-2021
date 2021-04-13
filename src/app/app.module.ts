@@ -8,14 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core-module/core.module';
 import { RouterModule } from '@angular/router';
 import { CarsListComponent } from './cars/cars-list/cars-list.component';
-import { AppRoutingModule } from'./app-routing.module';
-import { CarsDetailsComponent }from'./cars/cars-details/cars-details.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CarsDetailsComponent } from './cars/cars-details/cars-details.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
+
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -25,7 +26,6 @@ import { CarsDetailsComponent }from'./cars/cars-details/cars-details.component';
     //   {path: 'cars', component: <any>CarsListComponent}
     // ]),
     AppRoutingModule,
-    CarsDetailsComponent
   ],
   providers: [CarsService],
   bootstrap: [AppComponent]

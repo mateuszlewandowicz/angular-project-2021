@@ -6,14 +6,13 @@ import { SharedModule } from '../shared-module/shared.module';
 import { CarsDetailsComponent } from './cars-details/cars-details.component';
 import { RouterModule } from '@angular/router';
 
-
 @NgModule({
   declarations: [CarsListComponent, TotalCostComponent, CarsDetailsComponent],
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
   ],
-  exports: [CarsListComponent]
+  exports: [CarsListComponent,]
 })
 export class CarsModule { }
