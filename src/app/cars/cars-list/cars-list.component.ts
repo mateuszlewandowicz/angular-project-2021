@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild, ViewEncapsulation, AfterViewInit } from '
 import { Car } from "../models/car";
 import { TotalCostComponent } from '../total-cost/total-cost.component';
 import { CarsService } from "../cars.service"
+import { NgModule } from "@angular/core";
+import { RouterModule, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'cs-cars-list',
@@ -68,8 +70,8 @@ export class CarsListComponent implements OnInit, AfterViewInit {
   //     isFullyDamaged: false
   //   }
   // ];
-  constructor(private carsService: CarsService) {
-
+  constructor(private carsService: CarsService,
+              private router: Router) {
 
   }
 
@@ -86,9 +88,13 @@ export class CarsListComponent implements OnInit, AfterViewInit {
     })
   }
 
+ goToCarDetails(car : Car) {
+   this.router.navigate(['/cars', car.id]);
+ }
+
+
   ngAfterViewInit() {
     this.totalCostRef.showGross();
-
   }
 
   showGross(): void {

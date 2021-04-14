@@ -5,7 +5,7 @@ import { Car } from '../models/car';
 
 
 @Component({
-  selector: 'cs-cars-details',
+  selector: 'cars-details',
   templateUrl: './cars-details.component.html',
   styleUrls: ['./cars-details.component.less']
 })
@@ -14,7 +14,8 @@ export class CarsDetailsComponent implements OnInit {
   car! : Car;
 
   constructor(private carsService: CarsService,
-              private route : ActivatedRoute) { }
+              private route : ActivatedRoute,
+              private router : Router,) { }
 
   ngOnInit(): void {
     this.loadCar();
